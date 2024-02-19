@@ -1,0 +1,15 @@
+<div class="recepies">
+  <div class="recepe" *ngFor="let r of recepies">
+    <img src="{{ r.image }}" alt="{{ r.title }}" />
+    <h2>{{ r.title }}</h2>
+    <h3>{{ r.name }}</h3>
+    <p><strong>Ingredients:</strong></p>
+    <span *ngFor="let i of r.ingredients">
+      <span>{{ i }},</span>
+    </span>
+    <div class="button w-25 d-flex gap-2 text-primary m-1">
+      <button class="btn btn-warning" (click)="fun1()">Order</button>
+      <button class="btn btn-warning" (click)="fun2()">Cancel</button>
+    </div>
+  </div>
+</div>
